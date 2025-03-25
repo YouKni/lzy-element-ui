@@ -1,0 +1,17 @@
+/* 添加系统的默认CSS样式 */
+body {
+  font-family: var(--lzy-font-family);
+  font-weight: 400;
+  font-size: var(--lzy-font-size-base);
+  color: var(--lzy-text-color-primary);
+}
+
+a {
+  color: var(--lzy-text-color-primary);
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--lzy-color-primary-light-3);
+  }
+}
+

@@ -1,11 +1,6 @@
-import './assets/main.css'
+import './styles/index.css'; // 引入全局样式
+import { createApp } from 'vue';
+import App from './App.vue';
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import App from './App.vue'
-
-const app = createApp(App)
-
-app.use(createPinia())
-
-app.mount('#app')
+const app = createApp(App);
+app.mount('#app');

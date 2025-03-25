@@ -14,6 +14,7 @@ onMounted(() => {
 <template>
   <div id="app">
     <MyButton type="primary" plain ref="buttonRef">Test MyButton</MyButton>
+    <a href="#" >the link</a>
   </div>
 </template>
 

@@ -1,0 +1,101 @@
+/* 专门存放变量名称 */
+:root {
+  /* 品牌色 */
+  --lzy-color-white: #ffffff;
+  --lzy-color-black: #000000;
+  --lzy-color-primary: #409eff;
+  --lzy-color-primary-light-3: rgb(121.3, 187.1, 255);
+  --lzy-color-primary-light-5: rgb(159.5, 206.5, 255);
+  --lzy-color-primary-light-7: rgb(197.7, 225.9, 255);
+  --lzy-color-primary-light-8: rgb(216.8, 235.6, 255);
+  --lzy-color-primary-light-9: rgb(235.9, 245.3, 255);
+  --lzy-color-primary-dark-2: rgb(51.2, 126.4, 204);
+  --lzy-color-success: #67c23a;
+  --lzy-color-success-light-3: rgb(148.6, 212.3, 117.1);
+  --lzy-color-success-light-5: rgb(179, 224.5, 156.5);
+  --lzy-color-success-light-7: rgb(209.4, 236.7, 195.9);
+  --lzy-color-success-light-8: rgb(224.6, 242.8, 215.6);
+  --lzy-color-success-light-9: rgb(239.8, 248.9, 235.3);
+  --lzy-color-success-dark-2: rgb(82.4, 155.2, 46.4);
+  --lzy-color-warning: #e6a23c;
+  --lzy-color-warning-light-3: rgb(237.5, 189.9, 118.5);
+  --lzy-color-warning-light-5: rgb(242.5, 208.5, 157.5);
+  --lzy-color-warning-light-7: rgb(247.5, 227.1, 196.5);
+  --lzy-color-warning-light-8: rgb(250, 236.4, 216);
+  --lzy-color-warning-light-9: rgb(252.5, 245.7, 235.5);
+  --lzy-color-warning-dark-2: rgb(184, 129.6, 48);
+  --lzy-color-danger: #f56c6c;
+  --lzy-color-danger-light-3: rgb(248, 152.1, 152.1);
+  --lzy-color-danger-light-5: rgb(250, 181.5, 181.5);
+  --lzy-color-danger-light-7: rgb(252, 210.9, 210.9);
+  --lzy-color-danger-light-8: rgb(253, 225.6, 225.6);
+  --lzy-color-danger-light-9: rgb(254, 240.3, 240.3);
+  --lzy-color-danger-dark-2: rgb(196, 86.4, 86.4);
+  --lzy-color-error: #f56c6c;
+  --lzy-color-error-light-3: rgb(248, 152.1, 152.1);
+  --lzy-color-error-light-5: rgb(250, 181.5, 181.5);
+  --lzy-color-error-light-7: rgb(252, 210.9, 210.9);
+  --lzy-color-error-light-8: rgb(253, 225.6, 225.6);
+  --lzy-color-error-light-9: rgb(254, 240.3, 240.3);
+  --lzy-color-error-dark-2: rgb(196, 86.4, 86.4);
+  --lzy-color-info: #909399;
+  --lzy-color-info-light-3: rgb(177.3, 179.4, 183.6);
+  --lzy-color-info-light-5: rgb(199.5, 201, 204);
+  --lzy-color-info-light-7: rgb(221.7, 222.6, 224.4);
+  --lzy-color-info-light-8: rgb(232.8, 233.4, 234.6);
+  --lzy-color-info-light-9: rgb(243.9, 244.2, 244.8);
+  --lzy-color-info-dark-2: rgb(115.2, 117.6, 122.4);
+  /* 中性色 */
+  --lzy-bg-color: #ffffff;
+  --lzy-bg-color-page: #f2f3f5;
+  --lzy-bg-color-overlay: #ffffff;
+  --lzy-text-color-primary: #323330;
+  --lzy-text-color-regular: #606266;
+  --lzy-text-color-secondary: #909399;
+  --lzy-text-color-placeholder: #a8abb2;
+  --lzy-text-color-disabled: #c0c4cc;
+  --lzy-border-color: #dcdfe6;
+  --lzy-border-color-light: #e4e7ed;
+  --lzy-border-color-lighter: #ebeef5;
+  --lzy-border-color-extra-light: #f2f6fc;
+  --lzy-border-color-dark: #d4d7de;
+  --lzy-border-color-darker: #cdd0d6;
+  --lzy-fill-color: #f0f2f5;
+  --lzy-fill-color-light: #f5f7fa;
+  --lzy-fill-color-lighter: #fafafa;
+  --lzy-fill-color-extra-light: #fafcff;
+  --lzy-fill-color-dark: #ebedf0;
+  --lzy-fill-color-darker: #e6e8eb;
+  --lzy-fill-color-blank: #ffffff;
+  /* border变量 */
+  --lzy-border-width: 1px;
+  --lzy-border-radius: 4px;
+  --lzy-border-radius-small: 2px;
+  --lzy-border-radius-large: 6px;
+  --lzy-border-radius-circle: 100%;
+  --lzy-border-style: solid;
+  --lzy-border-color-hover: var(--lzy-text-color-disabled);
+  --lzy-border: var(--vk-border-width) var(--vk-border-style) var(--vk-border-color);
+  /* 字体变量 */
+  --lzy-font-size-base: 14px;
+  --lzy-font-size-extra-small: 12px;
+  --lzy-font-size-small: 13px;
+  --lzy-font-size-medium: 16px;
+  --lzy-font-size-large: 18px;
+  --lzy-font-size-extra-large: 20px;
+  --lzy-font-family:
+    'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑',
+    Arial, sans-serif;
+  --lzy-font-weight-primary: 500;
+  /** disabled 变量**/
+  --lzy-disabled-bg-color: var(--lzy-fill-color-light);
+  --lzy-disabled-text-color: var(--lzy-text-color-placeholder);
+  --lzy-disabled-border-color: var(--lzy-border-color-light);
+  /* box变量 */
+  --lzy-box-shadow: 0px 12px 32px 4px rgba(0, 0, 0, 0.04), 0px 8px 20px rgba(0, 0, 0, 0.08);
+  --lzy-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  --lzy-box-shadow-lighter: 0px 0px 6px rgba(0, 0, 0, 0.12);
+  --lzy-box-shadow-dark:
+    0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
+    0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+}
