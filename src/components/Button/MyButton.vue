@@ -38,7 +38,5 @@ defineExpose({
 </template>
 
 <style scoped>
-.lzy-button {
-  background-color:var(--lzy-color-primary);
-}
+
 </style>

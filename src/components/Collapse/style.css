@@ -1,0 +1,53 @@
+.lzy-collapse {
+  --lzy-collapse-border-color: var(--lzy-border-color-light);
+  --lzy-collapse-header-height: 48px;
+  --lzy-collapse-header-bg-color: var(--lzy-fill-color-blank);
+  --lzy-collapse-header-text-color: var(--lzy-text-color-primary);
+  --lzy-collapse-header-font-size: 13px;
+  --lzy-collapse-content-bg-color: var(--lzy-fill-color-blank);
+  --lzy-collapse-content-font-size: 13px;
+  --lzy-collapse-content-text-color: var(--lzy-text-color-primary);
+  --lzy-collapse-disabled-text-color: var(--lzy-disabled-text-color);
+  --lzy-collapse-disabled-border-color: var(--lzy-border-color-lighter);
+  border-top: 1px solid var(--lzy-collapse-border-color);
+  border-bottom: 1px solid var(--lzy-collapse-border-color);
+}
+
+.lzy-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--lzy-collapse-header-height);
+  line-height: var(--lzy-collapse-header-height);
+  background-color: var(--lzy-collapse-header-bg-colorcolor);
+  color: var(--lzy-collapse-header-text-color);
+  cursor: pointer; /* 鼠标悬停变成手指 */
+  font-size: var(--lzy-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--lzy-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--lzy-collapse-border-color);
+  &.is-disabled {
+    color: var(--lzy-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+  }
+}
+
+.lzy-collapse-item__content {
+  will-change: height;
+  background-color: var(--lzy-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--lzy-collapse-content-font-size);
+  color: var(--lzy-collapse-content-text-color);
+  border-bottom: 1px solid var(--lzy-collapse-border-color);
+  padding-bottom: 25px;
+}
+
+.slide-enter-active,.slide-leave-active{
+  transition: height 0.5s;
+}
