@@ -69,13 +69,14 @@
   --lzy-fill-color-blank: #ffffff;
   /* border变量 */
   --lzy-border-width: 1px;
-  --lzy-border-radius: 4px;
+  --lzy-border-radius-base:4px;
   --lzy-border-radius-small: 2px;
   --lzy-border-radius-large: 6px;
   --lzy-border-radius-circle: 100%;
+  --lzy-border-radius-round: 20px;
   --lzy-border-style: solid;
   --lzy-border-color-hover: var(--lzy-text-color-disabled);
-  --lzy-border: var(--vk-border-width) var(--vk-border-style) var(--vk-border-color);
+  --lzy-border: var(--lzy-border-width) var(--lzy-border-style) var(--lzy-border-color);
   /* 字体变量 */
   --lzy-font-size-base: 14px;
   --lzy-font-size-extra-small: 12px;
@@ -98,4 +99,7 @@
   --lzy-box-shadow-dark:
     0px 16px 48px 16px rgba(0, 0, 0, 0.08), 0px 12px 32px rgba(0, 0, 0, 0.12),
     0px 8px 16px -8px rgba(0, 0, 0, 0.16);
+    /* animation变量 */
+  --lzy-animation-duration: 0.3s;
+  --lzy-animation-duration-fast: 0.2s;
 }

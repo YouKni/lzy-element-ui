@@ -1,0 +1,85 @@
+.lzy-tooltip {
+  --lzy-popover-bg-color: var(--lzy-bg-color-overlay);
+  --lzy-popover-font-size: var(--lzy-font-size-base);
+  --lzy-popover-border-color: var(--lzy-border-color);
+  --lzy-popover-padding: 12px;
+  --lzy-popover-border-radius: 4px;
+  display: inline-block;
+}
+
+.lzy-tooltip {
+  .lzy-tooltip__popper {
+    background: var(--lzy-popover-bg-color);
+    border-radius: var(--lzy-popover-border-radius);
+    border: 1px solid var(--lzy-popover-border-color);
+    padding: var(--lzy-popover-padding);
+    color: var(--lzy-text-color-regular);
+    line-height: 1.4;
+    text-align: justify;
+    font-size: var(--lzy-popover-font-size);
+    box-shadow: var(--lzy-box-shadow-light);
+    word-break: break-all;
+    box-sizing: border-box;
+    z-index: 1000;
+    #arrow,
+    #arrow::before {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      /* box-sizing: border-box; */
+      background: var(--lzy-popover-bg-color);
+    }
+    #arrow {
+      visibility: hidden;
+    }
+    /* 把正方形转45°再只展示一半 = 三角箭头 */
+    #arrow::before {
+      visibility: visible;
+      content: ''; /*使用伪元素必须加*/
+      transform: rotate(45deg);
+    }
+    /* popper自带的特殊属性 */
+    &[data-popper-placement^='top'] > #arrow {
+      bottom: -5px;
+    }
+
+    &[data-popper-placement^='bottom'] > #arrow {
+      top: -5px;
+    }
+
+    &[data-popper-placement^='left'] > #arrow {
+      right: -5px;
+    }
+
+    &[data-popper-placement^='right'] > #arrow {
+      left: -5px;
+    }
+    &[data-popper-placement^='top'] > #arrow::before {
+      border-right: 1px solid var(--lzy-popover-border-color);
+      border-bottom: 1px solid var(--lzy-popover-border-color);
+    }
+    &[data-popper-placement^='bottom'] > #arrow::before {
+      border-left: 1px solid var(--lzy-popover-border-color);
+      border-top: 1px solid var(--lzy-popover-border-color);
+    }
+    &[data-popper-placement^='left'] > #arrow::before {
+      border-right: 1px solid var(--lzy-popover-border-color);
+      border-top: 1px solid var(--lzy-popover-border-color);
+    }
+    /* 为箭头添加边框 */
+    &[data-popper-placement^='right'] > #arrow::before {
+      border-left: 1px solid var(--lzy-popover-border-color);
+      border-bottom: 1px solid var(--lzy-popover-border-color);
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity var(--lzy-animation-duration);
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+}

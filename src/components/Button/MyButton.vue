@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ButtonProps } from './types';
 import {ref} from 'vue';
+import MyIcon from '../Icon/MyIcon.vue';
 // defineProps<ButtonProps>() 用于声明组件的 props 类型为 ButtonProps，而 withDefaults 则为这些 props 指定默认值
 withDefaults(defineProps<ButtonProps>(),{NativeType:'button'}) ;
 
@@ -29,14 +30,15 @@ defineExpose({
     'is-disabled' : disabled,
     'is-loading' : loading,
   }"
-  :disabled = "disabled" :autofocus="autofocus" :type="NativeType"> <!-- 需要重新封装原生的属性-->
-  <span> 
-    <!-- span用来包裹按钮的内容，slot允许父组件向这个按钮组件传递内容-->
+  :disabled = "disabled || loading" :autofocus="autofocus" :type="NativeType"> <!-- 需要重新封装原生的属性-->
+  <MyIcon icon="spinner" spin v-if="loading"></MyIcon> <!-- 如果正在加载 -->
+  <MyIcon :icon="icon" v-if="icon && !loading"></MyIcon> <!-- 如果有图标 -->
+  <span> <!-- span用来包裹按钮的内容，slot允许父组件向这个按钮组件传递内容-->
     <slot></slot>
   </span>
   </button>
 </template>
 
-<style scoped>
+<style >
 
 </style>

@@ -1,0 +1,80 @@
+.lzy-alert {
+  --lzy-alert-padding: 8px 16px;
+  --lzy-alert-top-margin: 20px;
+  --lzy-alert-border-radius-base: var(--lzy-border-radius-base);
+  --lzy-alert-bg-color: var(--lzy-color-white);
+  --lzy-alert-content-font-size: 13px;
+  --lzy-alert-text-color: var(--lzy-text-color-primary);
+}
+.lzy-alert {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  padding: var(--lzy-alert-padding);
+  margin: 0 auto;
+  margin-top: var(--lzy-alert-top-margin);
+  border-radius: var(--lzy-alert-border-radius-base);
+  background-color: var(--lzy-alert-bg-color);
+  position: relative;
+  .lzy-alert__content {
+    font-size: var(--lzy-alert-content-font-size);
+    color: var(--lzy-alert-text-color);
+    line-height: 18px;
+  }
+  .lzy-alert__close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+  }
+}
+.lzy-alert--success {
+  &.lzy-alert--light {
+    --lzy-alert-text-color: var(--lzy-color-success);
+    --lzy-alert-bg-color: var(--lzy-color-success-light-9);
+  }
+  &.lzy-alert--dark {
+    --lzy-alert-text-color: var(--lzy-color-white);
+    --lzy-alert-bg-color: var(--lzy-color-success);
+  }
+}
+
+.lzy-alert--warning {
+  &.lzy-alert--light {
+    --lzy-alert-text-color: var(--lzy-color-warning);
+    --lzy-alert-bg-color: var(--lzy-color-warning-light-9);
+  }
+  &.lzy-alert--dark {
+    --lzy-alert-text-color: var(--lzy-color-white);
+    --lzy-alert-bg-color: var(--lzy-color-warning);
+  }
+}
+.lzy-alert--info {
+  &.lzy-alert--light {
+    --lzy-alert-text-color: var(--lzy-color-info);
+    --lzy-alert-bg-color: var(--lzy-color-info-light-9);
+  }
+  &.lzy-alert--dark {
+    --lzy-alert-text-color: var(--lzy-color-white);
+    --lzy-alert-bg-color: var(--lzy-color-info);
+  }
+}
+.lzy-alert--error {
+    &.lzy-alert--light {
+      --lzy-alert-text-color: var(--lzy-color-error);
+      --lzy-alert-bg-color: var(--lzy-color-error-light-9);
+    }
+    &.lzy-alert--dark {
+      --lzy-alert-text-color: var(--lzy-color-white);
+      --lzy-alert-bg-color: var(--lzy-color-error);
+    }
+  }
+.lzy-alert-fade-enter-from,
+.lzy-alert-fade-leave-to {
+  opacity: 0;
+}
+
+.lzy-alert-fade-enter-active,
+.lzy-alert-fade-leave-active {
+  transition: opacity var(--lzy-transition-duration);
+}

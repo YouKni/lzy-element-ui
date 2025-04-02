@@ -7,14 +7,13 @@ export interface ButtonProps {
     plain?: boolean;
     round?: boolean;
     circle?: boolean;
-    loading?: boolean;
     disabled?: boolean;
-    icon?: string;
     NativeType?: NativeType; // 默认是button
     autofocus?: boolean; // 是否自动获取焦点
+    icon?: string;
+    loading?: boolean;
 }
-
-// 创建Button组件实例类型
+// 实现用户手动获取Button组件实例
 export interface ButtonInstance {
     ref: HTMLButtonElement | null;
 }

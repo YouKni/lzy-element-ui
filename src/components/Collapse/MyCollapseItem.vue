@@ -2,6 +2,7 @@
 import type { ItemProps } from './types';
 import { CollapseContextKey } from './types';
 import { defineProps, inject, computed } from 'vue';
+import MyIcon from '../Icon/MyIcon.vue';
 defineOptions({
     name: 'lzy-CollapseItem'
 });
@@ -56,6 +57,7 @@ const transitionEvents: Record<string, (el: HTMLElement) => void> = {
             <slot name="title">
                 {{ title }}
             </slot>
+            <MyIcon icon="angle-right" class="header-angle"></MyIcon>
         </div>
         <Transition name="slide" v-on="transitionEvents"> <!--正常Transition属性名叫v-enter-from,添加name之后变为name-enter-from -->
             <div class="lzy-collapse-item__wrapper" v-show="isActive">

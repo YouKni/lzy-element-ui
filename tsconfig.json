@@ -10,5 +10,11 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+      "types":["vitest/globals"],
+      "jsx": "preserve", // 保留 JSX 结构，由 Babel 处理
+      "jsxFactory": "h", // Vue 3 的 JSX 工厂函数（可选，默认已适配）
+      "jsxFragmentFactory": "Fragment" // Fragment 支持（可选）
+  }
 }
