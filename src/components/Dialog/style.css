@@ -1,0 +1,55 @@
+.lzy-dialog__wrapper {
+  --lzy-dialog-bg-color: var(--lzy-bg-color-overlay);
+  --lzy-dialog-shadow-color: var(--lzy-box-shadow);
+  --lzy-dialog-title-font-size: var(--lzy-font-size-large);
+  --lzy-dialog-content-font-size: var(--lzy-font-size-normal);
+  --lzy-dialog-font-line-height: 30px;
+  --lzy-dialog-border-color: var(--lzy-border-color);
+  --lzy-dialog-content-font-color: var(--lzy-text-color-regular);
+  --lzy-dialog-padding-primary: 16px;
+  --lzy-dialog-padding: 12px;
+  --lzy-dialog-border-radius: 8px;
+  --lzy-dialog-padding-primary: 20px;
+}
+.lzy-dialog__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: var(--lzy-dialog-bg-color);
+  background-color: rgba(0, 0, 0, 0.5);
+  .lzy-dialog {
+    position: relative;
+    background-color: var(--lzy-dialog-bg-color);
+    border-radius: var(--lzy-dialog-border-radius);
+    line-height: var(--lzy-dialog-font-line-height);
+    padding: var(--lzy-dialog-padding-primary);
+  }
+}
+.lzy-dialog__header {
+  font-size: var(--lzy-dialog-title-font-size);
+}
+.lzy-dialog__body {
+  font-size: var(--lzy-dialog-content-font-size);
+  color: var(--lzy-dialog-content-font-color);
+}
+.lzy-dialog__footer {
+  padding-top: var(--lzy-dialog-padding-primary);
+  text-align: right;
+  box-sizing: border-box;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--lzy-animation-duration);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

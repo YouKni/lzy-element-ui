@@ -12,6 +12,7 @@ export interface ButtonProps {
     autofocus?: boolean; // 是否自动获取焦点
     icon?: string;
     loading?: boolean;
+    onClick?: (e: MouseEvent) => void;
 }
 // 实现用户手动获取Button组件实例
 export interface ButtonInstance {

@@ -13,6 +13,10 @@ const useClickOutside = (element: Ref<HTMLElement | null>,callback:(e:MouseEvent
     onUnmounted(() => {
         document.removeEventListener('click',handle);
     });
+    // 返回清理函数
+    return ()=>{
+        document.removeEventListener('click',handle);
+    };
 };
 
 export default useClickOutside;
