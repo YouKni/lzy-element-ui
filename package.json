@@ -12,7 +12,8 @@
     "component"
   ],
   "respositiory": {
-    "type":"git"
+    "type":"gitee",
+    "url":"https://gitee.com/youkni/lzy-element-ui"
   },
   "files": [
     "dist"
@@ -47,7 +48,8 @@
     "format": "prettier --write src/",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
