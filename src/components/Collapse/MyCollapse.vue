@@ -12,11 +12,15 @@ const activeNames = ref<NameType[]>(props.modelValue??[]);  // 激活的折叠�
 
 // 作用：当父组件传递的modelValue发生变化时，更新activeNames的值
 watch(()=>props.modelValue,()=>{
-    // 但我已经在v-model中做了处理，不写watch也能工作
     activeNames.value = props.modelValue??[];
 });
 
 const handleItemClick = (name: NameType) => {
+    let _activeNames = [...activeNames.value];
+    if(props.accordion){
+        _activeNames = _activeNames.length === 0 ? [name] : [];
+        activeNames.value = _activeNames;
+    }
     if (activeNames.value.includes(name)) {
         activeNames.value = activeNames.value.filter(item => item !== name);
     } else {

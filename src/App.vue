@@ -44,7 +44,7 @@ onMounted(() => {
       <img width="100" height="100">
     </Dropdown>
     <MyButton type="info" @click="dialogVisble = true">打开dialog</MyButton>
-    <MyDialog v-model:modelValue="dialogVisble">
+    <MyDialog v-model:modelValue="dialogVisble" >
       <template #title>标题</template>
       <template #body>
         <div>dialog content</div>

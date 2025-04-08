@@ -1,6 +1,9 @@
-module.exports = {
+import postcss from 'postcss';
+import postcssNested from 'postcss-nested';
+
+export default {
     plugins: [
-        require('postcss-nested'), // 用来嵌套css
-        require('postcss-each'), // 用来循环css
+        postcssNested(),
+        postcss(),
     ],
 };

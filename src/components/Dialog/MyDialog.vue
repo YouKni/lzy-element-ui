@@ -4,14 +4,14 @@
             <div class="lzy-dialog" :style="{ width: width }" ref="dialogContainerNode">
                 <div class="lzy-dialog__header">
                     <slot name="title">
-                        <span class="lzy-dialog__title">{{ title }}</span>
+                        <span>{{ title }}</span>
                     </slot>
                 </div>
                 <div class="lzy-dialog__body">
                     <slot name="body"></slot>
                 </div>
                 <div class="lzy-dialog__footer">
-                    <Button v-if="showClose" v:type="type" @Click="closeDialog" class="lzy-dialog__close">
+                    <Button v-if="showClose" v:type="type" @Click="closeDialog">
                         确认
                     </Button>
                 </div>
@@ -60,6 +60,5 @@ watch(() => props.modelValue, async (val) => {
     } else {
         closeDialog();
     }
-    isOpen.value = val;
 });
 </script>

@@ -59,6 +59,16 @@
     --lzy-alert-bg-color: var(--lzy-color-info);
   }
 }
+.lzy-alert--danger {
+  &.lzy-alert--light {
+    --lzy-alert-text-color: var(--lzy-color-danger);
+    --lzy-alert-bg-color: var(--lzy-color-danger-light-9);
+  }
+  &.lzy-alert--dark {
+    --lzy-alert-text-color: var(--lzy-color-white);
+    --lzy-alert-bg-color: var(--lzy-color-danger);
+  }
+}
 .lzy-alert--error {
     &.lzy-alert--light {
       --lzy-alert-text-color: var(--lzy-color-error);

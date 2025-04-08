@@ -65,8 +65,11 @@ useClickOutside(popperContainerNode as any, () => {
     if (props.trigger === 'click' && isOpen.value && !props.manual) { // 自动触发
         closeDebounce();
     }
+    if(isOpen.value){
+        emits('click-outside',true);
+    }
 });
-// 自动触发
+// 自动触发 
 if (!props.manual) {
     attachEvents();
 }

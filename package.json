@@ -1,26 +1,67 @@
 {
   "name": "lzy-elementui",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "基于Vue3的UI组件库",
   "private": true,
   "type": "module",
+  "author": "lizhenyu",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "UI",
+    "component"
+  ],
+  "respositiory": {
+    "type":"git"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "dist/index.css"
+  ],
+  "main": "./dist/umd/lzy-element.umd.cjs",
+  "module": "./dist/es/lzy-element.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/es/lzy-element.js",
+      "require": "./dist/umd/lzy-element.umd.cjs",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./dist/": {
+      "import": "./dist/",
+      "require": "./dist/"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
-    "build-only": "vite build",
+    "build-only": "run-p build-umd build-es",
+    "build-umd":"vite build --config vite.umd.config.ts",
+    "build-es":"vite build --config vite.es.config.ts",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@popperjs/core": "^2.11.8",
+    "@vitepress-demo-preview/component": "^2.3.2",
+    "@vitepress-demo-preview/plugin": "^1.4.0",
+    "async-validator": "^4.2.5",
     "axios": "^1.8.4",
     "lodash-es": "^4.17.21",
-    "pinia": "^3.0.1",
+    "pinia": "^3.0.1"
+  },
+  "peerDependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
@@ -51,8 +92,11 @@
     "prettier": "3.5.3",
     "typescript": "~5.8.0",
     "vite": "^6.2.1",
+    "vite-plugin-dts": "^4.5.3",
     "vite-plugin-vue-devtools": "^7.7.2",
+    "vitepress": "^1.6.3",
     "vitest": "^3.1.1",
-    "vue-tsc": "^2.2.8"
+    "vue-tsc": "^2.2.8",
+     "vue": "^3.5.13"
   }
 }

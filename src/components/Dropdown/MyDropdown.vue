@@ -30,7 +30,7 @@ import RenderVnode from '../Common/RenderVnode';
 defineOptions({
     name: 'LzyDropdown',
 });
-const props = withDefaults(defineProps<DropdownProps>(),{});
+withDefaults(defineProps<DropdownProps>(),{});
 const emits = defineEmits<DropdownEmits>();
 const tooltipRef = ref<TooltipInstance>();
 
