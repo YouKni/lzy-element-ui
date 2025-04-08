@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 export default defineConfig({
   title: "My Compononet Project",
   description: "A VitePress Site",
-  base:'/lzy-element/',
+  base:'/lzy-element-ui/', // 必须和仓库名匹配
   // srcDir: 'components' , // 默认源文件在整个.vitepress目录下，这里指定源文件在components目录下
   vite:{
     resolve:{
