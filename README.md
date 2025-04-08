@@ -1,6 +1,6 @@
 # lzy-elementUI
 
-[组件文档：](https://youkni.github.io/lzy-element-ui/)
+[组件文档](https://youkni.github.io/lzy-element-ui/)
 
 ## Recommended IDE Setup
 
