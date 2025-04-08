@@ -1,6 +1,6 @@
 # lzy-elementUI
 
-This template should help get you started developing with Vue 3 in Vite.
+[组件文档：](https://youkni.github.io/lzy-element-ui/)
 
 ## Recommended IDE Setup
 
